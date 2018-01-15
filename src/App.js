@@ -1,0 +1,242 @@
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import pic from './a2.jpg';
+import pic2 from './a4.jpg';
+import office from './office.jpg';
+import server from './server.jpg';
+import repair from './repair.jpg';
+import webdev from './webdev.jpg';
+import mobile from './mobile.jpg';
+import './App.css';
+class InnerContainer extends Component {
+    constructor(props){
+	super(props);
+    }
+    renderHome(){
+	return(<div className="innercontainer">
+	       <div className="containerFluid">
+	       <div className="row">
+	       <img src={office}/>
+	       </div>
+	       <div className="row" style={{padding:'4%',fontFamily:'Merriweather'}}>
+	       <div className="col-sm-1">
+	       </div>
+	       <div className="col-sm-7">
+	       Website is a webpage developer company for small and medium sized businesses.
+	       We develope front-end and back-end solutions.
+	       MySQL database is integrated in our server solutions and we offer clean UIs,
+	       such that companies themselves can easily update their page.
+	       </div>
+	       <div className="col-sm-2">
+	       <button type="button" className="btn btn-outline-secondary text-dark">Showcase</button>
+	       </div>
+	       <div className="col-sm-2">
+	       <button type="button" class="btn btn-outline-secondary">Solutions</button>
+
+	       </div>
+	       </div>
+	       </div>
+	       </div>
+	       
+	);
+    }
+    renderTeam() {
+	return(<div className="innercontainer">
+	       <div className="containerFluid">
+	       <div className="row">
+	       <div className="col-sm-7">
+	       <div className="row" style={{padding:'5%'}}>
+	       <div className="col-sm-6">
+	       <img className="personimage"style={{borderRadius:'50%',height:'25vh',width:'12.5vw',padding:'0%'}}src={pic}/>	       
+	       </div>
+	       <div className="col-sm-6">
+	       <b>Developer</b><br/>
+	       <p className="persontext">
+	       Anders Huse is a 34 year old physicist and programmer.
+	       Responsible for technical issues, server development and big data algorithms.
+	       </p>
+	       </div>
+	       </div>
+	       <div className="row" style={{padding:'5%'}}>
+	       <div className="col-sm-6">
+	       <img className="personimage"style={{borderRadius:'50%',height:'25vh',width:'12.5vw',padding:'0%'}}src={pic2}/>
+	       </div>
+	       <div className="col-sm-6">
+	       <b>Developer / Economy / Sales</b><br/>
+	       <p className="persontext">
+	       Lars Andreas Jorkjend is a 34 year old economist.
+	       Responsible for customer relations, CSS-styling, databases and economy.
+	       <br/><br/>Contact: 90 16 35 57
+	       </p>
+
+	       </div>
+	       </div>
+	       </div>
+	       
+	       <div className="col-sm-5" style={{padding:'0'}}>
+	       <img src={server} style={{width:'100%',height:'100%',padding:'0px',margin:'0px'}}/>
+	       </div>
+	       </div>
+	       </div>
+	       </div>
+	      
+	      );
+    }
+    renderProducts(){
+	return(<div className="innercontainer">
+	       <div className="containerFluid">
+	       <div className="row" style={{padding:'5% 5% 5% 5%'}}>
+	       {/*box 1 1*/}
+	       <div className="col-sm-3">
+	       <h4>Server solutions</h4>
+	       <ul>
+	       <li>Web Hosting</li>
+	       <li>DNS Servers</li>
+	       <li>Server Systems</li>
+	       <li>Technical Support</li>
+	       </ul>
+	       </div>
+	       <div className="col-sm-3">
+	       <img src={server} style={{width:'100%',height:'100%',padding:'0'}}/>
+	       </div>
+	       {/*box 1 2*/}	       
+	       <div className="col-sm-3">
+	       <h4>Computer Service</h4>
+	       <ul>
+	       <li>Repairing Computers</li>
+	       <li>Backup Service</li>
+	       <li>Protection</li>
+	       <li>Technical Support</li>
+	       </ul>
+	       </div>
+	       <div className="col-sm-3">
+	       <img src={repair} style={{width:'100%',height:'100%',padding:'0'}}/>
+	       </div>
+
+	       </div>{/* row 1 */}
+	       
+	       <div className="row" style={{padding:'5% 5% 5% 5%'}}>
+	       {/*box 2 1*/}
+	       <div className="col-sm-3">
+	       <h4>Web pages</h4>
+	       <ul>
+	       <li>Clean Websites</li>
+	       <li>Database integration</li>
+	       <li>Consulting</li>
+	       <li>Technical Support</li>
+	       </ul>
+	       </div>
+	       <div className="col-sm-3">
+	       <img src={webdev} style={{width:'100%',height:'100%',padding:'0'}}/>
+	       </div>
+	       {/*box 2 2*/}	       
+	       <div className="col-sm-3">
+	       <h4>Mobile Apps</h4>
+	       <ul>
+	       <li>Web Hosting</li>
+	       <li>DNS Servers</li>
+	       <li>Server Systems</li>
+	       <li>Technical Support</li>
+	       </ul>
+	       </div>
+	       <div className="col-sm-3">
+	       <img src={mobile} style={{width:'100%',height:'100%',padding:'0'}}/>
+	       </div>
+	       
+	       </div>{/* row 2 */}
+	       </div>
+	       </div>
+	);
+    }
+    render(){
+	if(this.props.name==="Team") {
+	    return (this.renderTeam());
+	}
+	if(this.props.name==="Home") {
+	    return (this.renderHome());
+	}
+	if(this.props.name==="Products") {
+	    return (this.renderProducts());
+	}
+	else return(<div></div>);
+    }
+}
+class Content extends Component {
+    constructor(props){
+	super(props);
+    }
+    render(){
+	return(<div className="smoothScroll">
+	       <div id={this.props.name}className="containerFluid contentcontainer">
+	       <div className="row">
+	       <div className="content">
+
+	       <InnerContainer name={this.props.name}/>
+	       </div>
+	       </div>
+	       </div>
+	       </div>
+	      );
+    }
+}
+class HeaderList extends Component {
+    constructor(props){
+	super(props);
+    }
+    render(){
+	return(
+		<div className="headeritems"><a className="headeritem" href={'#'+this.props.name}>{this.props.name}</a></div>
+	);
+    }
+}
+class HeaderBar extends Component {
+    constructor(props){
+	super(props);
+    }
+    render() {
+	return(<div style={{position:'fixed',zIndex:'1000',width:'100vw'}}>
+	       <div className="containerFluid headerbar"> 
+	       <div className="row">
+	       <div className="col-sm-4">
+	       <h1>Website</h1>
+	       </div>
+	       <div className="col-sm-3" style={{padding:'20px'}}>
+	       <input type="text" name="search\
+" placeholder="Search.."></input>
+	       </div>
+	       <div className="col-sm-1">
+	       <HeaderList name="Home"/>
+	       </div>
+	       <div className="col-sm-1">
+	       <HeaderList name="Products"/>
+	       </div>
+	       <div className="col-sm-1">
+	       <HeaderList name="Team"/>
+	       </div>
+	       <div className="col-sm-1">
+	       <HeaderList name="About"/>
+	       </div>
+	       <div className="col-sm-1">
+	       
+	       </div>
+	       </div>
+	       </div>
+	       </div>
+	);
+    }
+}
+class App extends Component {
+  render() {
+    return (
+	    <div className="totalcontainer">
+	    <HeaderBar/>
+	    <Content id="home" name="Home"/>
+	    <Content id="products" name="Products"/>
+	    <Content id="team" name="Team"/>
+	    <Content id="about" name="About"/>
+	    </div>
+    );
+  }
+}
+
+export default App;

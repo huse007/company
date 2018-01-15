@@ -16,7 +16,7 @@ class InnerContainer extends Component {
 	return(<div className="innercontainer">
 	       <div className="containerFluid">
 	       <div className="row">
-	       <img src={office}/>
+	       <img src={office} style={{widht:'100%'}}/>
 	       </div>
 	       <div className="row" style={{padding:'4%',fontFamily:'Merriweather'}}>
 	       <div className="col-sm-1">

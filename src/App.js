@@ -16,7 +16,7 @@ class InnerContainer extends Component {
 	return(<div className="innercontainer">
 	       <div className="containerFluid">
 	       <div className="row">
-	       <img src={office} style={{widht:'100%'}}/>
+	       <img src={office} style={{width:'100%',height:'100%'}}/>
 	       </div>
 	       <div className="row" style={{padding:'4%',fontFamily:'Merriweather'}}>
 	       <div className="col-sm-1">
@@ -198,7 +198,7 @@ class HeaderBar extends Component {
 	       <div className="containerFluid headerbar"> 
 	       <div className="row">
 	       <div className="col-sm-4">
-	       <h1>Website</h1>
+	       <h1>Website Develop</h1>
 	       </div>
 	       <div className="col-sm-3" style={{padding:'20px'}}>
 	       <input type="text" name="search\

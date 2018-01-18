@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => <div style={{color:'#000080',fontSize:'26px',fontFamily:'Carter One',bottom:'0',top:'-60'}}><i class="material-icons">place</i>{text}</div>;
+const AnyReactComponent = ({ text }) => <div style={{color:'#000080',fontSize:'26px',fontFamily:'Carter One',bottom:'0',top:'-60'}}><i className="material-icons">place</i>{text}</div>;
 
 export default class Map extends Component {
     static defaultProps = {

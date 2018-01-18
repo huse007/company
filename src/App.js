@@ -40,7 +40,7 @@ class InnerContainer extends Component {
 	       <img src={office} alt="" style={{width:'100%',height:'100%'}}/>
 	       </div>
 	       <div className="row" style={{padding:'4%',fontFamily:'Merriweather'}}>
-	       <div className="col-sm-1">
+	       <div className="col-sm-1 hidden-xs-down">
 	       </div>
 	       <div className="col-sm-7">
 	       Website is a webpage developer company for small and medium sized businesses.
@@ -68,7 +68,7 @@ class InnerContainer extends Component {
 	       <div className="col-sm-7">
 	       <div className="row" style={{padding:'5%'}}>
 	       <div className="col-sm-6">
-	       <img alt="" className="personimage"style={{borderRadius:'50%',height:'25vh',width:'12.5vw',padding:'0%'}}src={pic}/>	       
+	       <img alt="" className="personimage"style={{borderRadius:'50%',width:'80%',height:'25vh',padding:'0%'}}src={pic}/>	       
 	       </div>
 	       <div className="col-sm-6">
 	       <b>Developer</b><br/>
@@ -80,7 +80,7 @@ class InnerContainer extends Component {
 	       </div>
 	       <div className="row" style={{padding:'5%'}}>
 	       <div className="col-sm-6">
-	       <img alt="" className="personimage"style={{borderRadius:'50%',height:'25vh',width:'12.5vw',padding:'0%'}}src={pic2}/>
+	       <img alt="" className="personimage"style={{borderRadius:'50%',width:'80%',height:'25vh',padding:'0%'}}src={pic2}/>
 	       </div>
 	       <div className="col-sm-6">
 	       <b>Developer / Economy / Sales</b><br/>
@@ -136,7 +136,7 @@ class InnerContainer extends Component {
 	       
 	       <div className="row" style={{padding:'5% 5% 5% 5%'}}>
 	       {/*box 2 1*/}
-	       <div className="col-sm-3">
+	       <div className="col-sm-3 col-">
 	       <h4>Web pages</h4>
 	       <ul>
 	       <li>Clean Websites</li>
@@ -145,11 +145,11 @@ class InnerContainer extends Component {
 	       <li>Technical Support</li>
 	       </ul>
 	       </div>
-	       <div className="col-sm-3">
+	       <div className="col-sm-3 col-">
 	       <img alt="" src={webdev} style={{width:'100%',height:'100%',padding:'0'}}/>
 	       </div>
 	       {/*box 2 2*/}	       
-	       <div className="col-sm-3">
+	       <div className="col-sm-3 col-">
 	       <h4>Mobile Apps</h4>
 	       <ul>
 	       <li>Web Hosting</li>
@@ -158,7 +158,7 @@ class InnerContainer extends Component {
 	       <li>Technical Support</li>
 	       </ul>
 	       </div>
-	       <div className="col-sm-3">
+	       <div className="col-sm-3 col-">
 	       <img alt="" src={mobile} style={{width:'100%',height:'100%',padding:'0'}}/>
 	       </div>
 	       
@@ -171,32 +171,32 @@ class InnerContainer extends Component {
 	//init_map();	
 	return(<div className="innercontainer">
 	       <div className="containerFluid">
-	       <div className="row" style={{padding:'5% 5% 5% 5%'}}>
+	       <div className="row" style={{padding:'10vh 1vh 10vh 1vh'}}>
 
 	       <div className="col-sm-7">
-	       <div className="container">                                       
+	       <div className="container" style={{padding:'0'}}>                                       
                <h4>Contact Information</h4>                                                   
                <table className="table">                                         
                <tbody>                                                           
                <tr>                                                              
                <td>Customer service</td>                                               
-               <td>+47 92 16 35 57</td>                                                       
-               <td>service@website-dev.no</td>                                                      
+               <td>+47 92163557</td>                                                       
+               <td>service @wd.no</td>                                                      
                </tr>                                                             
                <tr>                                                              
                <td>Sales</td>                                                     
-               <td>+47 93 16 35 57</td>                                                       
-               <td>lars@website-dev.no</td>                                                      
+               <td>+47 93163557</td>                                                       
+               <td>lars @wd.no</td>                                                      
                </tr>
 	       <tr>                                                              
                <td>Technical Support</td>                                                     
-               <td>+47 98 59 60 23</td>                                                       
-               <td>anders@website-dev.no</td>                                                      
+               <td>+47 98596023</td>                                                       
+               <td>anders @wd.no</td>                                                      
                </tr>
 	       <tr>                                                              
                <td>Economy</td>                                                     
-               <td>+47 94 16 38 57</td>                                                       
-               <td>economy@website-dev.no</td>                                                      
+               <td>+47 94313857</td>                                                       
+               <td>economy @wd.no</td>                                                      
                </tr>
 	       </tbody>                                                          
                </table>                                                          
@@ -275,26 +275,26 @@ class HeaderBar extends Component {
 	return(<div style={{position:'fixed',zIndex:'1000',width:'100vw'}}>
 	       <div className="containerFluid headerbar"> 
 	       <div className="row">
-	       <div className="col-sm-4">
+	       <div className="col-sm-4 col-xs-5">
 	       <h1>Website Develop</h1>
 	       </div>
-	       <div className="col-sm-3" style={{padding:'20px'}}>
+	       <div className="col-sm-3 hidden-xs-down" style={{padding:'20px'}}>
 	       <input type="text" name="search\
 " placeholder="Search.."></input>
 	       </div>
-	       <div className="col-sm-1">
+	       <div className="col-sm-1 hidden-xs-down">
 	       <HeaderList name="Home"/>
 	       </div>
-	       <div className="col-sm-1">
+	       <div className="col-sm-1 hidden-xs-down">
 	       <HeaderList name="Products"/>
 	       </div>
-	       <div className="col-sm-1">
+	       <div className="col-sm-1 hidden-xs-down">
 	       <HeaderList name="Team"/>
 	       </div>
-	       <div className="col-sm-1">
+	       <div className="col-sm-1 hidden-xs-down">
 	       <HeaderList name="About"/>
 	       </div>
-	       <div className="col-sm-1">
+	       <div className="col-sm-1 hidden-xs-down">
 	       
 	       </div>
 	       </div>
@@ -312,9 +312,7 @@ class App extends Component {
 	    <Content id="products" name="Products"/>
 	    <Content id="team" name="Team"/>
 	    <Content id="about" name="About"/>
-	    <div id="map" style={{width:'100px',height:'100px'}}>
-	    
-	    </div>
+
 	    </div>
     );
   }

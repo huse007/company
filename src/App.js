@@ -13,26 +13,8 @@ import repair from './images/repair.jpg';
 import webdev from './images/webdev.jpg';
 import mobile from './images/mobile.jpg';
 import './App.css';
-//
-//const google=window.google;
-//var  map = null;
-
-/*function init_map() {
-  var latlng = new google.maps.LatLng(59.9286, 10.7492);
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: latlng,
-    zoom: 18
-  });
-  var marker = new google.maps.Marker({
-    position:latlng,
-    map:map
-  });
-}*/
 
 class InnerContainer extends Component {
-  constructor(props){
-    super(props);
-  }
   renderHome(){
     return(<div className="innercontainer">
       <div className="containerFluid">
@@ -164,7 +146,6 @@ class InnerContainer extends Component {
   );
 }
 renderAbout(){
-  //init_map();
   return(<div className="innercontainer">
     <div className="containerFluid">
       <div className="row" style={{padding:'10vh 1vh 10vh 1vh'}}>
@@ -236,15 +217,11 @@ render(){
 }
 }
 class Content extends Component {
-  constructor(props){
-    super(props);
-  }
   render(){
     return(<div className="smoothScroll">
       <div id={this.props.name}className="containerFluid contentcontainer">
         <div className="row">
           <div className="content">
-
             <InnerContainer name={this.props.name}/>
           </div>
         </div>
@@ -254,9 +231,6 @@ class Content extends Component {
 }
 }
 class HeaderList extends Component {
-  constructor(props){
-    super(props);
-  }
   render(){
     return(
       <div className="headeritems"><a className="headeritem" href={'#'+this.props.name}>{this.props.name}</a></div>
@@ -264,9 +238,6 @@ class HeaderList extends Component {
   }
 }
 class HeaderBar extends Component {
-  constructor(props){
-    super(props);
-  }
   render() {
     return(<div style={{position:'fixed',zIndex:'1000',width:'100vw'}}>
       <div className="containerFluid headerbar">
@@ -291,7 +262,6 @@ class HeaderBar extends Component {
             <HeaderList name="About"/>
           </div>
           <div className="col-sm-1 hidden-xs-down">
-
           </div>
         </div>
       </div>

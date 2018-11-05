@@ -1,7 +1,7 @@
 # Simple React Single Page
 
-This is just an example and the company is not real.
-Url: https://huse007.herokuapp.com/
+This is just an example and the company/text is NOT real.
+Url: https://huse007.herokuapp.com/ (wait 30s due to sleep mode)
 
 ## Install (Linux)
 
